@@ -1,4 +1,4 @@
-from importlib.resources import _
+import importlib.resources
 
 from django.db import models
 
@@ -6,11 +6,11 @@ from django.db import models
 class Product(models.Model):
 
     class Category(models.TextChoices):
-        RESTOBAR = 'RB', _('Restobar')
-        CAFE = 'CF', _('Cafe')
-        CANTEEN = 'CN', _('Canteen')
-        NIGHT_CLUB = 'NC', _('Night club')
-        BAR = 'B', _('Bar')
+        RESTOBAR = 'RB', ('Restobar')
+        CAFE = 'CF', ('Cafe')
+        CANTEEN = 'CN', ('Canteen')
+        NIGHT_CLUB = 'NC', ('Night club')
+        BAR = 'B', ('Bar')
 
     name = models.CharField(max_length=150)
     # city = models.Choices
